@@ -18,6 +18,11 @@ public class LoginTest extends BaseTest {
 
     }
 
+    @Test
+    public void Test2(){
+        System.out.println("HelloWorld");
+    }
+
 
 
 

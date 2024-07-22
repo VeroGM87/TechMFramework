@@ -4,7 +4,7 @@
         <classes>
             <class name="framework.Tests.LoginTest">
                 <methods>
-                    <exclude name="Test2"/>
+                    <include name="Test2"/>
                 </methods>
             </class>
         </classes>

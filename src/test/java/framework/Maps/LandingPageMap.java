@@ -11,7 +11,7 @@ public class LandingPageMap {
 
 
     //Inventory products
-    public By AddToCartBtn = By.cssSelector("div.card-body:last-child button.btn.w-10");
+    public By AddToCartBtn = By.xpath("(//button[@class='btn w-10 rounded'])[1]");
     public By ViewBtn = By.cssSelector("div.card-body:last-child button.btn.w-40");
 
 

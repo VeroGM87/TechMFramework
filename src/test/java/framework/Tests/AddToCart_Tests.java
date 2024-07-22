@@ -26,7 +26,25 @@ public class AddToCart_Tests extends BaseTest {
     }
 
     @Test
-    public void NavigateToHome(){
+    public void addToCart(){
+        commands.EnterText(lg.loginInputUserName, "test888999000@gmail.com");
+        commands.EnterText(lg.loginInputPassword, "Test1234");
+        commands.clickElement(lg.loginButton);
+        commands.waitForElementToBeClickable(landing.HomeBtn);
+        commands.clickElement(landing.AddToCartBtn);
+
+    }
+
+    @Test
+    public void NavigateToHome(){//Firts navigate to Cart and comeback to Home
+        commands.EnterText(lg.loginInputUserName, "test888999000@gmail.com");
+        commands.EnterText(lg.loginInputPassword, "Test1234");
+        commands.clickElement(lg.loginButton);
+        commands.waitForElementToBeClickable(landing.HomeBtn);
+        commands.clickElement(landing.CartBtn);
+        commands.waitForElementToBeClickable(landing.HomeBtn);
+        commands.clickElement(landing.HomeBtn);
+
 
     }
 
