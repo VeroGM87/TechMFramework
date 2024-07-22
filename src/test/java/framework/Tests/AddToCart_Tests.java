@@ -25,6 +25,11 @@ public class AddToCart_Tests extends BaseTest {
 
     }
 
+    @Test
+    public void NavigateToHome(){
+
+    }
+
 
 
 
