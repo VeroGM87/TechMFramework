@@ -23,7 +23,7 @@ public class AddToCart_Tests extends BaseTest {
         Assert.assertEquals(driver.getCurrentUrl(),"https://rahulshettyacademy.com/client/dashboard/cart");
     }
 
-    @Test
+    @Test(groups = {"Regression", "SmokeTest"})
     public void ViewProduct(){//Validate View Product, Add to Cart and Navigate to Cart
         LoginPageMethods log = new LoginPageMethods(commands);
         log.login();
@@ -36,7 +36,7 @@ public class AddToCart_Tests extends BaseTest {
     }
 
 
-    @Test
+    @Test(groups = {"SmokeTest"})
     public void NavigateToHome(){//Firts navigate to Cart and comeback to Home
         LoginPageMethods log = new LoginPageMethods(commands);
         log.login();

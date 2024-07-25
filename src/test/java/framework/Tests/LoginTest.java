@@ -14,7 +14,7 @@ public class LoginTest extends BaseTest {
     LandingPageMap landingPg = new LandingPageMap();
 
 
-    @Test
+    @Test(groups = {"Regression", "SmokeTest"})
     public void LoginSuccessfully(){
         LoginPageMethods log = new LoginPageMethods(commands);
         log.login();

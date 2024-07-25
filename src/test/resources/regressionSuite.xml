@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MyRegressionSuite">
+    <test name="RegressionTests">
+
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+
+            <class name="framework.Tests.AddToCart_Tests">
+                <methods>
+                    <include name="Test2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
