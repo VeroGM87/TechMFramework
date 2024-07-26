@@ -13,16 +13,17 @@ public class BaseTest {
     public CommonActions commands;
 
 
-    @BeforeMethod
+    @BeforeMethod (groups = {"Regression", "SmokeTest"})
     public void setup(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://rahulshettyacademy.com/client/");
         commands = new CommonActions(driver);
+
     }
 
-    @AfterMethod
+    @AfterMethod (groups = {"Regression", "SmokeTest"})
     public void tearDown(){
         if (driver!=null) driver.quit();
     }
