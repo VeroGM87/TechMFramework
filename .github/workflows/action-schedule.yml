@@ -1,0 +1,12 @@
+  name: print Hello when schedule
+  on:
+    schedule:
+      - cron: "*/5 * * *"
+
+  jobs:
+    run-hello-schedule:
+      name: print Hello whenSchedule
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Hello World Vero!!"
+
