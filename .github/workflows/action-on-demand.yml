@@ -1,0 +1,27 @@
+  name: Print Hello On Demand
+  on:
+    workflow_dispatch:
+      inputs:
+        environment:
+          type: choice
+          description: select your Environment
+          required: true
+          options:
+            - Dev
+            - QA
+            - Prod
+  jobs:
+    run-hello:
+      name: Print Hello When Schedule
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Hello World 1" $environment
+        - run: echo "Hello 2"
+
+    run-hello2:
+      name: Print Hello On Demand
+      runs-on: self-hosted
+      steps:
+        - run: echo "Print Hello 3"
+
+
