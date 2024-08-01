@@ -5,8 +5,12 @@ import framework.Maps.LoginPageMap;
 import framework.Pages.LoginPageMethods;
 import framework.Utils.BaseTest;
 import framework.Utils.CommonActions;
+import framework.Utils.MySQLManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class LoginTest extends BaseTest {
 
@@ -24,8 +28,17 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void Test2(){
-        System.out.println("HelloWorld");
+    public void Test2()throws SQLException {
+
+        ResultSet result= MySQLManager.executeQuery("SELECT * FROM users");
+        while (result.next()){
+            int userId = result.getInt("user_id");
+            String username= result.getString("username");
+            String email =result.getString("email");
+
+            System.out.println("Id" + ", username: " + username + ", Email: " + email);
+
+        }
     }
 
 
